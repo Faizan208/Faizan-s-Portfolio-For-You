@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf6e9">
+  <meta name="description" content="Faizan — Creative Developer. An interactive editorial portfolio.">
+  <title>Faizan — Creative Developer</title>
+  <link rel="preload" as="image" href="assets/images/hero-main.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Small embedded CSS example retained for the Web Technologies assignment. */
+    ::selection {
+      background: #cb070c;
+      color: #fff8ee;
+    }
+  </style>
+</head>
+
+<body>
+  <main id="home">
+    <section class="hero-scroll-scene" id="heroScrollScene" aria-label="Introduction and scroll transition">
+      <section class="hero" id="hero" aria-labelledby="heroTitle">
+        <h1 id="heroTitle" class="sr-only">Faizan — Creative Developer</h1>
+        <p class="sr-only">Instrumentation engineering and web. Turning ideas into clean, functional and meaningful
+          digital experiences.</p>
+
+        <!-- Static hero: the portrait, big FAIZAN lettering, background, and
+             details are ONE original image. No layer moves during scrolling. -->
+        <div class="hero-stage" id="heroStage">
+          <img class="original-frame" src="assets/images/hero-main.png" width="1672" height="941"
+            alt="Faizan with oversized red typography and editorial portfolio details" draggable="false"
+            fetchpriority="high">
+
+          <!-- The same original cursor-controlled blue-letter reveal. -->
+          <img class="blue-reveal" id="blueReveal" src="assets/images/faizan-blue-clean.png" width="1672" height="941"
+            alt="" aria-hidden="true" draggable="false">
+
+          <!-- Left header text / line plus inert right side ideas text. -->
+          <img class="header-art" src="assets/images/header-details.png" width="1672" height="941" alt=""
+            aria-hidden="true" draggable="false">
+          <a class="creative-home" href="#home" aria-label="Back to portfolio home" title="Home"
+            style="--focus-space:4px"></a>
+        </div>
+        <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+      </section>
+    </section>
+
+    <!-- The Featured Work section rises directly from beneath the fixed hero.
+         No redundant Selected Projects splash page. -->
+    <section class="featured-work" id="featured-work" aria-labelledby="featuredTitle">
+      <div class="work-masthead">
+        <span>FAIZAN / WORK INDEX</span>
+        <span>FEATURED PROJECTS&nbsp; / &nbsp;2026</span>
+      </div>
+      <div class="work-headline">
+        <p class="work-kicker">01 — 04 / PRIMARY WORK</p>
+        <h2 id="featuredTitle">BUILT FOR<br><span>THE REAL WORLD</span><b>.</b></h2>
+        <p>Systems, software, and ideas made to solve actual problems.</p>
+      </div>
+
+      <div class="featured-journey" id="featuredJourney">
+        <!-- This portrait remains a single fixed-looking, sticky visual element.
+             It does not move on its own; project cards scroll past it. -->
+        <div class="portrait-pin" aria-hidden="true">
+          <span class="portrait-halo"></span>
+          <img src="assets/images/portrait-sticker.png" width="1024" height="1536" alt="" loading="lazy"
+            draggable="false">
+          <span class="portrait-caption">CREATIVE<br>DEVELOPER<span>®</span></span>
+        </div>
+        <div class="project-side-marker" aria-hidden="true">SCROLL / WORK 01—04</div>
+
+        <article class="feature-project feature-left" id="work-erp" data-project-id="erp">
+          <div class="feature-content reveal-on-scroll">
+            <div class="feature-top"><span>01 / 04</span><span>ERP / UNIVERSITY SYSTEM</span></div>
+            <h3 class="project-name">LGU <em>ERP</em><span class="word-period">.</span></h3>
+            <p class="project-category">ERP System / Full-Stack Development</p>
+            <p class="project-description">A university ERP system under development for Lahore Garrison University,
+              supporting teachers, students, courses, assessments, examinations, eligibility, results, and
+              administration.</p>
+            <div class="tech-list" aria-label="Technologies">
+              <span>ERPNext</span><span>Frappe</span><span>Python</span><span>JavaScript</span><span>Docker</span><span>Linux</span>
+            </div>
+            <a class="project-preview project-preview-link" href="https://erp.lgo.video.pk/" target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open LGU ERP website in a new tab (screenshot preview is coming soon)">
+              <span class="preview-watermark">ERP</span>
+              <span class="preview-corner">01 ↗</span>
+              <span class="preview-status"><b>PROJECT PREVIEW</b><br>COMING SOON</span>
+              <span class="preview-cross" aria-hidden="true">+</span>
+            </a>
+            <a class="project-cta" href="https://erp.lgo.video.pk/" target="_blank" rel="noopener noreferrer"
+              aria-label="Open LGU ERP website in a new tab">VIEW ERP PROJECT <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="feature-project feature-right" id="work-pinext" data-project-id="pinext">
+          <div class="feature-content reveal-on-scroll">
+            <div class="feature-top"><span>02 / 04</span><span>WEB / APPLICATION</span></div>
+            <h3 class="project-name">PI<span class="word-accent">NEXT</span><span class="word-period">.</span></h3>
+            <p class="project-category">Web Application / Software Project</p>
+            <p class="project-description">A web application project. Screenshots and additional technical details will
+              be added once the original project material is available.</p>
+            <div class="tech-list" aria-label="Project context"><span>WEB APPLICATION</span><span>SOFTWARE
+                PROJECT</span></div>
+            <div class="project-preview" role="img"
+              aria-label="Pinext screenshot not yet supplied. Project preview coming soon.">
+              <span class="preview-watermark">PX</span>
+              <span class="preview-corner">02 ↗</span>
+              <span class="preview-status"><b>PROJECT PREVIEW</b><br>COMING SOON</span>
+              <span class="preview-cross" aria-hidden="true">+</span>
+            </div>
+            <button class="project-cta" type="button" data-open-project="work-pinext" aria-haspopup="dialog">EXPLORE
+              PINEXT <span aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+
+        <article class="feature-project feature-left" id="work-pos" data-project-id="pos">
+          <div class="feature-content reveal-on-scroll">
+            <div class="feature-top"><span>03 / 04</span><span>POS / BUSINESS SYSTEM</span></div>
+            <h3 class="project-name">POS <em>SYSTEM</em><span class="word-period">.</span></h3>
+            <p class="project-category">Point of Sale / Business Software</p>
+            <p class="project-description">A practical business software project focused on products, transactions,
+              sales workflows, and day-to-day management functionality.</p>
+            <div class="tech-list" aria-label="Project focus">
+              <span>SALES</span><span>TRANSACTIONS</span><span>MANAGEMENT</span></div>
+            <div class="project-preview" role="img"
+              aria-label="POS screenshot not yet supplied. Project preview coming soon.">
+              <span class="preview-watermark">POS</span>
+              <span class="preview-corner">03 ↗</span>
+              <span class="preview-status"><b>PROJECT PREVIEW</b><br>COMING SOON</span>
+              <span class="preview-cross" aria-hidden="true">+</span>
+            </div>
+            <button class="project-cta" type="button" data-open-project="work-pos" aria-haspopup="dialog">VIEW POS
+              SYSTEM <span aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+
+        <article class="feature-project feature-right" id="work-ecoworth" data-project-id="ecoworth">
+          <div class="feature-content reveal-on-scroll">
+            <div class="feature-top"><span>04 / 04</span><span>SUSTAINABILITY / MARKETPLACE</span></div>
+            <h3 class="project-name">ECO<em>WORTH</em><span class="word-period">.</span></h3>
+            <p class="project-category">Sustainability / Industrial Marketplace</p>
+            <p class="project-description">A circular-economy marketplace connecting industries that produce reusable
+              waste with companies that can use those materials as manufacturing inputs.</p>
+            <div class="tech-list" aria-label="Project focus"><span>INDUSTRIAL REUSE</span><span>MATERIAL
+                EXCHANGE</span><span>CIRCULAR ECONOMY</span></div>
+            <div class="project-preview project-preview-eco" role="img"
+              aria-label="EcoWorth screenshot not yet supplied. Project preview coming soon.">
+              <span class="preview-watermark">EW</span>
+              <span class="preview-corner">04 ↗</span>
+              <span class="preview-status"><b>PROJECT PREVIEW</b><br>COMING SOON</span>
+              <span class="preview-cross" aria-hidden="true">+</span>
+            </div>
+            <button class="project-cta" type="button" data-open-project="work-ecoearth" aria-haspopup="dialog">VIEW
+              ECOWORTH <span aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+      </div>
+      <div class="featured-endline"><span>END OF FEATURED WORK</span><span>04 / 04 &nbsp; ↓</span></div>
+    </section>
+
+    <!-- Smaller supporting projects: deliberately separate from featured work. -->
+    <section class="other-experiments" id="other-experiments" aria-labelledby="experimentsTitle">
+      <div class="experiments-head reveal-on-scroll">
+        <div>
+          <p class="work-kicker">05 — 07 / SYSTEMS, SIMULATIONS & PLAY</p>
+          <h2 id="experimentsTitle">OTHER <em>EXPERIMENTS</em><span>.</span></h2>
+        </div>
+        <p>Smaller explorations in operating systems, memory management, and game development.</p>
+      </div>
+      <div class="experiments-grid">
+        <article class="experiment-card reveal-on-scroll" id="work-scheduler" data-project-id="scheduler">
+          <div class="experiment-top"><span>05 / EXPERIMENT</span><span aria-hidden="true">↗</span></div>
+          <div class="experiment-symbol" aria-hidden="true">//</div>
+          <div class="experiment-body">
+            <p class="project-category">OS / SIMULATION</p>
+            <h3 class="project-name">REAL-TIME<br>SCHEDULER</h3>
+            <p class="project-description">An educational simulation of process creation, scheduling decisions, CPU
+              execution, and process-state transitions.</p>
+          </div>
+          <button class="project-cta" type="button" data-open-project="work-scheduler" aria-haspopup="dialog">VIEW
+            EXPERIMENT <span aria-hidden="true">↗</span></button>
+        </article>
+        <article class="experiment-card reveal-on-scroll" id="work-oom" data-project-id="oom">
+          <div class="experiment-top"><span>06 / EXPERIMENT</span><span aria-hidden="true">↗</span></div>
+          <div class="experiment-symbol" aria-hidden="true">&lt;/&gt;</div>
+          <div class="experiment-body">
+            <p class="project-category">SYSTEM / EXPERIMENT</p>
+            <h3 class="project-name">OOM<br>GUARD</h3>
+            <p class="project-description">A system-software experiment exploring safer memory-pressure behavior and
+              protection for essential services.</p>
+          </div>
+          <button class="project-cta" type="button" data-open-project="work-oom" aria-haspopup="dialog">EXPLORE PROJECT
+            <span aria-hidden="true">↗</span></button>
+        </article>
+        <article class="experiment-card reveal-on-scroll" id="work-spin" data-project-id="spin">
+          <div class="experiment-top"><span>07 / EXPERIMENT</span><span aria-hidden="true">↗</span></div>
+          <div class="experiment-symbol" aria-hidden="true">✳</div>
+          <div class="experiment-body">
+            <p class="project-category">GAME / INTERACTION</p>
+            <h3 class="project-name">SPIN<br>A HERO</h3>
+            <p class="project-description">A Roblox project featuring character collection, placement, progression,
+              economy, interactive UI, and persistent player data.</p>
+          </div>
+          <button class="project-cta" type="button" data-open-project="work-spin" aria-haspopup="dialog">VIEW GAME
+            PROJECT <span aria-hidden="true">↗</span></button>
+        </article>
+      </div>
+      <div class="work-outro">
+        <span>07 PROJECTS / 04 FEATURED / 03 EXPERIMENTS</span>
+        <p>NEXT CHAPTER <b>— BUILD WITH ME ↓</b></p>
+      </div>
+    </section>
+
+
+    <!-- 08 / COLLABORATE — exactly one new section. Projects and hero above are unchanged. -->
+    <section class="build-with-me" id="build-with-me" aria-labelledby="buildWithMeHeading">
+      <div class="collab-inner">
+        <div class="collab-topline" aria-hidden="true">
+          <span>FAIZAN / OPEN COLLABORATION</span>
+          <span>IDEAS &nbsp; → &nbsp; REALITY &nbsp; / &nbsp; 2026</span>
+        </div>
+
+        <div class="collab-layout">
+          <div class="collab-intro collab-enter" style="--collab-delay:0ms">
+            <p class="collab-kicker">08 / COLLABORATE <span class="collab-kicker-line" aria-hidden="true"></span></p>
+          </div>
+
+          <div class="collab-headline collab-enter" style="--collab-delay:130ms">
+            <h2 id="buildWithMeHeading"><span class="collab-title-line"><span>BUILD</span></span><span
+                class="collab-title-line"><span>WITH <em>ME.</em></span></span></h2>
+          </div>
+
+          <div class="collab-image-block">
+            <div class="collab-photo-depth" id="collabPhotoDepth">
+              <figure class="collab-photo collab-enter" style="--collab-delay:190ms">
+                <div class="collab-image-square">
+                  <img src="assets/images/build-with-me-approved-portrait.png"
+                    alt="Portrait of Faizan in a plaid overshirt against a bright blue sky" width="1254" height="1254"
+                    loading="lazy" decoding="async" draggable="false">
+                  <span class="collab-frame-corner corner-one" aria-hidden="true"></span>
+                  <span class="collab-frame-corner corner-two" aria-hidden="true"></span>
+                </div>
+                <figcaption><span>FIG. 08 — FAIZAN / CREATIVE DEVELOPER</span><span>BUILD SOMETHING REAL ↗</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="collab-copy collab-enter" style="--collab-delay:310ms">
+            <p class="collab-opening">Have an idea worth building?<br><strong>Let's turn it into something
+                real.</strong></p>
+            <p class="collab-description">Whether it’s a portfolio, web platform, creative interface, ERP-based
+              workflow, or custom digital product, let’s build something meaningful together.</p>
+          </div>
+
+          <a class="collab-cta collab-enter" id="collabCta" href="project-inquiry.html" style="--collab-delay:430ms"
+            aria-label="Start a project — open project inquiry page">
+            <span class="collab-plus" id="collabPlus" aria-hidden="true"><span class="collab-plus-mark"></span></span>
+            <span class="collab-cta-label">START A PROJECT</span>
+            <span class="collab-cta-line" aria-hidden="true"></span>
+            <span class="collab-cta-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="collab-bottomline" aria-hidden="true">
+          <span>FAIZAN © 2026</span>
+          <span>GOOD IDEAS DESERVE TO BE BUILT.</span>
+          <span>08 / NEXT CHAPTER</span>
+        </div>
+        <span class="collab-ghost" id="collabGhost" aria-hidden="true">CREATE</span>
+      </div>
+    </section>
+
+
+    <!-- 09 / CONTENT CREATOR — ExplainWeeb, media and experiments.
+         Featured video: replace placeholder with an actual video URL when available.
+         Project Inquiry, Hero, Projects and Build With Me remain untouched. -->
+    <section class="creator-section" id="content-creator" aria-labelledby="creatorTitle">
+      <div class="creator-container">
+        <div class="creator-masthead creator-enter" style="--creator-delay:0ms">
+          <span>09 / CONTENT CREATOR</span>
+          <span>FAIZAN &nbsp; / &nbsp; EXPLAINWEEB &nbsp; / &nbsp; 2026</span>
+        </div>
+
+        <div class="creator-intro">
+          <div class="creator-heading-block creator-enter" style="--creator-delay:95ms">
+            <p class="creator-eyebrow">ANOTHER SIDE OF THE STORY <span aria-hidden="true">↗</span></p>
+            <h2 id="creatorTitle">BEYOND<br><span>THE CODE<em>.</em></span></h2>
+          </div>
+          <div class="creator-intro-copy creator-enter" style="--creator-delay:220ms">
+            <p class="creator-statement">I build things — and sometimes I talk about them too.</p>
+            <p>When I’m not working on web experiences, software, or creative experiments, I also create content, share
+              ideas, and document what I’m learning.</p>
+          </div>
+        </div>
+
+        <div class="creator-feature-grid">
+          <div class="creator-feature creator-enter" style="--creator-delay:275ms">
+            <div class="creator-feature-top">
+              <span>01 / FEATURED VIDEO</span>
+              <span>YOUTUBE &nbsp; / &nbsp; EXPLAINWEEB</span>
+            </div>
+            <div class="creator-video-frame" id="youtube-video" data-youtube-url=""
+              aria-label="ExplainWeeb featured video placeholder">
+              <div class="creator-artwork" id="creatorArtwork" aria-hidden="true">
+                <div class="creator-artwork-rule creator-artwork-rule-one"></div>
+                <div class="creator-artwork-title"><span>EXPLAIN</span><strong>WEEB<span
+                      class="creator-dot">.</span></strong></div>
+                <div class="creator-artwork-meta"><span>YOUTUBE / CREATIVE LOG</span><span>VIDEO LINK COMING SOON</span>
+                </div>
+              </div>
+              <!-- Replace with Faizan's actual popular YouTube video -->
+              <!-- Set data-youtube-url above to the actual youtube.com/watch?v=... or youtu.be/... URL later. -->
+              <a class="creator-play" id="creatorPlay" href="#youtube-video"
+                aria-label="Open the featured ExplainWeeb video when a video link is available">
+                <span class="creator-play-icon" aria-hidden="true"></span>
+              </a>
+              <div class="creator-video-notice" id="creatorVideoNotice" role="status" aria-live="polite" hidden>
+                <strong>FEATURED VIDEO / COMING SOON</strong>
+                <span>The video link hasn't been added yet.</span>
+                <a href="https://www.youtube.com/@ExplainWeeb1" target="_blank" rel="noopener noreferrer">WATCH
+                  EXPLAINWEEB ↗</a>
+              </div>
+            </div>
+            <div class="creator-feature-caption"><span>FIG. 09 — VIDEO JOURNAL / EXPLAINWEEB</span><span>CREATING BEYOND
+                CODE ↗</span></div>
+          </div>
+
+          <aside class="creator-aside creator-enter" style="--creator-delay:365ms"
+            aria-label="Content creator and channel information">
+            <p class="creator-aside-kicker">BEHIND THE CHANNEL <span aria-hidden="true">— 01</span></p>
+            <h3>I CREATE<br>THINGS<br><em>HERE TOO.</em></h3>
+            <p class="creator-aside-description">Videos, experiments, ideas, tech and whatever I find interesting enough
+              to share.</p>
+            <a class="creator-channel-cta" href="https://www.youtube.com/@ExplainWeeb1" target="_blank"
+              rel="noopener noreferrer">
+              <span>VISIT EXPLAINWEEB</span><span aria-hidden="true" class="creator-link-arrow">↗</span>
+            </a>
+            <div class="creator-social creator-enter" style="--creator-delay:440ms">
+              <span>FIND ME ONLINE</span>
+              <a href="https://www.youtube.com/@ExplainWeeb1" target="_blank" rel="noopener noreferrer"
+                aria-label="ExplainWeeb YouTube channel, opens in a new tab">
+                YOUTUBE <span aria-hidden="true">↗</span>
+              </a>
+              <span class="creator-social-footnote">YOUTUBE / EXPLAINWEEB</span>
+            </div>
+          </aside>
+        </div>
+
+        <div class="creator-media-label creator-enter" style="--creator-delay:60ms">
+          <span>FROM THE ARCHIVE</span><span>HTML / MULTIMEDIA STUDIES</span>
+        </div>
+        <div class="creator-media-grid">
+          <article class="creator-native-video creator-enter" style="--creator-delay:160ms"
+            aria-labelledby="creatorArchiveTitle">
+            <div class="creator-media-header"><span>01 / MOVING IMAGE</span><span>LOCAL VIDEO</span></div>
+            <h3 id="creatorArchiveTitle">FROM THE ARCHIVE <span>/ VIDEO</span></h3>
+            <div class="creator-native-video-shell">
+              <video controls preload="none" playsinline aria-label="Faizan's local portfolio video; file to be added"
+                class="creator-native-video-player">
+                <source src="assets/images/Emperors Knight Betrayed And Killed But in Hindi Explain Weeb.mp4" type="video/mp4">
+                Your browser does not support the video element.
+              </video>
+              <!-- <div class="creator-local-video-placeholder" aria-hidden="true">
+                <span>FAIZAN / VIDEO ARCHIVE</span>
+                <strong>YOUR VIDEO<br><em>GOES HERE.</em></strong>
+                <span>ADD YOUR MP4 TO ACTIVATE PLAYBACK ↗</span>
+              </div> -->
+            </div>
+            <p class="creator-media-description">Local video slot — <code>assets/portfolio-video.mp4</code> has not been
+              provided yet. Add your clip to enable playback.</p>
+          </article>
+
+          <article class="creator-native-audio creator-enter" style="--creator-delay:290ms"
+            aria-labelledby="creatorAudioTitle">
+            <div class="creator-media-header"><span>02 / IN MY OWN WORDS</span><span>AUDIO NOTE</span></div>
+            <div class="creator-audio-content">
+              <span class="creator-sound-glyph" aria-hidden="true">)))</span>
+              <h3 id="creatorAudioTitle">A QUICK NOTE<br><em>FROM ME.</em></h3>
+              <p>Press play if you'd rather hear it from me.</p>
+              <audio controls preload="none" aria-label="Faizan's audio introduction; file to be added"
+                class="creator-native-audio-player">
+                <source src="assets/images/Anuv Jain - ALAG AASMAAN (a song on the ukulele).mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+              <p class="creator-media-description">Audio slot — <code>assets/faizan-audio-intro.mp3</code> has not been
+                provided yet.</p>
+            </div>
+          </article>
+        </div>
+        <div class="creator-bottom-rule" aria-hidden="true"><span>FAIZAN / 2026</span><span>CREATE. SHARE.
+            REPEAT.</span><span>09 / END OF CHAPTER</span></div>
+      </div>
+    </section>
+
+    <!-- Remaining project CTAs open local details, never fabricated destinations. -->
+    <dialog class="project-dialog" id="projectDialog" aria-labelledby="dialogTitle">
+      <div class="dialog-inner">
+        <div class="dialog-top"><span>FAIZAN / PROJECT DETAILS</span><button type="button" id="dialogClose"
+            aria-label="Close project details">✕</button></div>
+        <p class="dialog-category" id="dialogCategory"></p>
+        <h2 id="dialogTitle"></h2>
+        <p id="dialogDescription"></p>
+        <div class="dialog-tags" id="dialogTags"></div>
+        <p class="dialog-note">Project screenshot and public link are not available for this project yet.</p>
+      </div>
+    </dialog>
+  </main>
+
+  <!-- FINAL CHAPTER / Editorial footer.
+       The Nature Place image was used for layout inspiration only;
+       this keeps FAIZAN's own cream/vermillion/charcoal identity. -->
+  <footer class="site-footer" id="site-footer" aria-labelledby="footerTitle">
+    <div class="footer-paper">
+      <div class="footer-container">
+        <div class="footer-micro-head footer-enter">
+          <span>10 / THE LAST PAGE</span>
+          <span>FAIZAN &nbsp;—&nbsp; CREATIVE DEVELOPER / 2026</span>
+        </div>
+
+        <div class="footer-intro">
+          <h2 id="footerTitle" class="footer-headline footer-enter">THAT'S<br><em>A WRAP.</em></h2>
+          <div class="footer-note footer-enter">
+            <span class="footer-note-number">[ END OF SCROLL &nbsp; / &nbsp; NOT THE STORY ]</span>
+            <p>A little code, a lot of curiosity. Thanks for taking a look around.</p>
+            <span class="footer-note-after">STILL MAKING THINGS &nbsp; ↗</span>
+          </div>
+        </div>
+
+        <!-- Typographic editorial index strip, inspired by the reference's
+             small gallery rhythm, not copied nature imagery. -->
+        <nav class="footer-quick-index footer-enter" aria-label="Jump to portfolio chapters">
+          <a href="#featured-work" class="footer-index-item"><span class="footer-index-count">01 /
+              WORK</span><strong>BUILD<span>↗</span></strong></a>
+          <a href="#other-experiments" class="footer-index-item"><span class="footer-index-count">02 /
+              LAB</span><strong>EXPLORE<span>↗</span></strong></a>
+          <a href="#build-with-me" class="footer-index-item"><span class="footer-index-count">03 /
+              COLLAB</span><strong>CONNECT<span>↗</span></strong></a>
+          <a href="#content-creator" class="footer-index-item"><span class="footer-index-count">04 /
+              CREATE</span><strong>WATCH<span>↗</span></strong></a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Angular paper-cut skyline: subtle echo of the supplied footer
+         reference's horizon without borrowing its green/nature imagery. -->
+    <svg class="footer-horizon" viewBox="0 0 1440 74" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path
+        d="M0 48 L35 48 L47 44 L61 47 L73 40 L86 44 L106 39 L121 43 L137 38 L156 44 L183 43 L195 32 L206 43 L233 40 L252 43 L278 33 L299 37 L319 39 L336 30 L354 33 L367 44 L385 41 L403 45 L426 37 L455 43 L480 39 L500 43 L522 35 L546 39 L564 42 L596 42 L610 29 L622 39 L635 37 L648 43 L679 39 L706 43 L722 35 L743 41 L758 40 L776 31 L789 42 L813 38 L838 41 L858 35 L887 42 L906 40 L928 45 L946 35 L962 37 L979 43 L1003 40 L1027 43 L1047 38 L1066 42 L1089 29 L1100 40 L1127 43 L1150 37 L1173 42 L1199 33 L1210 43 L1235 39 L1261 42 L1278 34 L1300 42 L1323 37 L1346 43 L1362 40 L1384 43 L1402 36 L1421 42 L1440 39 L1440 74 L0 74 Z"
+        fill="currentColor" />
+    </svg>
+
+    <div class="footer-ink">
+      <div class="footer-container">
+        <div class="footer-ink-top footer-enter">
+          <div class="footer-signoff">
+            <a href="#home" class="footer-wordmark" aria-label="FAIZAN, return to home">FAIZAN<span>.</span></a>
+            <p>Creative developer.<br>Always building, always learning.</p>
+            <span class="footer-signoff-stamp">DESIGNED &amp; BUILT WITH INTENT &nbsp; ®</span>
+          </div>
+
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <h3>EXPLORE <span>↘</span></h3>
+            <a href="#featured-work">Featured Work <span>↗</span></a>
+            <a href="#other-experiments">Other Experiments <span>↗</span></a>
+            <a href="#build-with-me">Build With Me <span>↗</span></a>
+            <a href="#content-creator">Beyond the Code <span>↗</span></a>
+          </nav>
+
+          <div class="footer-links">
+            <h3>ELSEWHERE <span>↘</span></h3>
+            <a href="https://www.youtube.com/@ExplainWeeb1" target="_blank" rel="noopener noreferrer">YouTube /
+              ExplainWeeb <span>↗</span></a>
+            <a href="project-inquiry.html">Project Inquiry <span>↗</span></a>
+            <a href="https://erp.lgo.video.pk/" target="_blank" rel="noopener noreferrer">LGU ERP <span>↗</span></a>
+            <p class="footer-no-fake-links">REAL WORK. REAL LINKS. NO PLACEHOLDERS HERE.</p>
+          </div>
+        </div>
+
+        <div class="footer-endmark footer-enter" aria-hidden="true">F<span>A</span>IZAN.</div>
+        <div class="footer-bottomline">
+          <span>© 2026 FAIZAN. ALL RIGHTS RESERVED.</span>
+          <span>MADE WITH HTML / CSS / JAVASCRIPT</span>
+          <span>THE END &nbsp; / &nbsp; KEEP CREATING.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>

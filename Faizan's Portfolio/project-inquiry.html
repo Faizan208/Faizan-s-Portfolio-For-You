@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tell Faizan about your next website, software project, creative interface, or digital idea.">
+  <meta name="theme-color" content="#f6efe5">
+  <title>Project Inquiry — Faizan / Creative Developer</title>
+  <!-- Existing visual foundation is preserved. Inquiry-only overrides are scoped. -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/inquiry.css">
+  <script src="js/inquiry.js" defer></script>
+</head>
+<body class="inquiry-page">
+  <div class="inquiry-shell">
+    <header class="inquiry-site-header">
+      <a class="inquiry-wordmark" href="index.html" aria-label="Faizan portfolio home">FAIZAN<span>.</span></a>
+      <span class="inquiry-header-center" aria-hidden="true">INDEPENDENT CREATIVE DEVELOPER <span>✳</span> 2026</span>
+      <a class="inquiry-back-link" href="index.html#build-with-me"><span aria-hidden="true">↖</span> BACK TO PORTFOLIO</a>
+    </header>
+
+    <main id="main-content" class="inquiry-main">
+      <div class="inquiry-page-rule"><span>08 / COLLABORATE</span><span>PROJECT REQUEST / NO. 001</span></div>
+
+      <div class="inquiry-layout">
+        <section class="inquiry-visual" aria-labelledby="inquiry-visual-heading">
+          <div class="inquiry-visual-top">
+            <span class="inquiry-micro-label"><i aria-hidden="true"></i> OPEN FOR NEW IDEAS</span>
+            <span class="inquiry-micro-code">FIG. 09 / 2026</span>
+          </div>
+          <div class="inquiry-photo-frame">
+            <img class="inquiry-photo" src="assets/images/project-inquiry-portrait.png"
+                 alt="Faizan seated outdoors in a dark plaid overshirt with a blue sky behind him"
+                 width="1122" height="1402" decoding="async" fetchpriority="high" draggable="false">
+            <span class="inquiry-corner inquiry-corner--tl" aria-hidden="true"></span>
+            <span class="inquiry-corner inquiry-corner--br" aria-hidden="true"></span>
+            <span class="inquiry-photo-index" aria-hidden="true">F / 09</span>
+          </div>
+          <div class="inquiry-visual-caption">
+            <div>
+              <span class="inquiry-caption-kicker">FAIZAN / CREATIVE DEVELOPER</span>
+              <h2 id="inquiry-visual-heading">LET'S BUILD<br><em>SOMETHING REAL.</em></h2>
+            </div>
+            <span class="inquiry-caption-star" aria-hidden="true">✳</span>
+          </div>
+          <div class="inquiry-visual-bottom"><span>IDEAS</span><span class="inquiry-visual-line" aria-hidden="true"></span><span>DESIGN</span><span class="inquiry-visual-line" aria-hidden="true"></span><span>CODE</span></div>
+        </section>
+
+        <section class="inquiry-content" aria-labelledby="inquiry-title">
+          <div class="inquiry-section-label"><span class="inquiry-section-number">01 / PROJECT INQUIRY</span><span class="inquiry-section-rule" aria-hidden="true"></span><span class="inquiry-section-mark" aria-hidden="true">↗</span></div>
+          <div class="inquiry-introduction">
+            <h1 id="inquiry-title">Tell me about<br><span>your idea.</span></h1>
+            <p>Share the basics of what you're planning and I'll have enough context to continue the conversation.</p>
+          </div>
+
+          <form id="projectInquiryForm" class="inquiry-form" novalidate aria-label="Project inquiry form">
+            <div class="inquiry-form-intro"><span>THE ESSENTIALS</span><span><b>*</b> REQUIRED FIELDS</span></div>
+            <div class="inquiry-fields">
+              <div class="inquiry-field">
+                <label for="clientName">FULL NAME <span aria-hidden="true">*</span></label>
+                <input id="clientName" name="fullName" type="text" autocomplete="name" placeholder="Your name" required minlength="2" maxlength="100" aria-describedby="clientNameError">
+                <p class="inquiry-error" id="clientNameError" aria-live="polite"></p>
+              </div>
+              <div class="inquiry-field">
+                <label for="clientEmail">EMAIL ADDRESS <span aria-hidden="true">*</span></label>
+                <input id="clientEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required maxlength="254" aria-describedby="clientEmailError" inputmode="email">
+                <p class="inquiry-error" id="clientEmailError" aria-live="polite"></p>
+              </div>
+              <div class="inquiry-field inquiry-field--wide">
+                <label for="projectType">PROJECT TYPE <span aria-hidden="true">*</span></label>
+                <span class="inquiry-select-wrap">
+                  <select id="projectType" name="projectType" required aria-describedby="projectTypeError">
+                    <option value="" selected disabled>Select what you're building</option>
+                    <option value="Portfolio Website">Portfolio Website</option>
+                    <option value="Business Website">Business Website</option>
+                    <option value="Web Application">Web Application</option>
+                    <option value="ERP / Management System">ERP / Management System</option>
+                    <option value="UI / UX Project">UI / UX Project</option>
+                    <option value="Creative Experiment">Creative Experiment</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <span class="inquiry-select-arrow" aria-hidden="true">⌄</span>
+                </span>
+                <p class="inquiry-error" id="projectTypeError" aria-live="polite"></p>
+              </div>
+              <div class="inquiry-field inquiry-field--wide">
+                <label for="projectDescription">TELL ME ABOUT YOUR PROJECT <span aria-hidden="true">*</span></label>
+                <textarea id="projectDescription" name="description" rows="3" placeholder="What are you trying to build?" required maxlength="5000" aria-describedby="projectDescriptionError"></textarea>
+                <p class="inquiry-error" id="projectDescriptionError" aria-live="polite"></p>
+              </div>
+              <div class="inquiry-field">
+                <label for="projectBudget">ESTIMATED BUDGET <span class="inquiry-optional">OPTIONAL</span></label>
+                <span class="inquiry-select-wrap">
+                  <select id="projectBudget" name="budget">
+                    <option value="Not sure yet">Not sure yet</option>
+                    <option value="Under $500">Under $500</option>
+                    <option value="$500 – $1,000">$500 – $1,000</option>
+                    <option value="$1,000 – $2,500">$1,000 – $2,500</option>
+                    <option value="$2,500+">$2,500+</option>
+                  </select>
+                  <span class="inquiry-select-arrow" aria-hidden="true">⌄</span>
+                </span>
+              </div>
+              <div class="inquiry-field">
+                <label for="projectTimeline">PREFERRED TIMELINE <span class="inquiry-optional">OPTIONAL</span></label>
+                <span class="inquiry-select-wrap">
+                  <select id="projectTimeline" name="timeline">
+                    <option value="" selected>Choose a timeline</option>
+                    <option value="As soon as possible">As soon as possible</option>
+                    <option value="2–4 weeks">2–4 weeks</option>
+                    <option value="1–2 months">1–2 months</option>
+                    <option value="Flexible / let's discuss">Flexible / let's discuss</option>
+                  </select>
+                  <span class="inquiry-select-arrow" aria-hidden="true">⌄</span>
+                </span>
+              </div>
+              <div class="inquiry-field inquiry-field--wide">
+                <label for="projectReference">WEBSITE / SOCIAL / REFERENCE LINK <span class="inquiry-optional">OPTIONAL</span></label>
+                <input id="projectReference" name="referenceUrl" type="url" inputmode="url" maxlength="2000" placeholder="https://example.com" aria-describedby="projectReferenceError">
+                <p class="inquiry-error" id="projectReferenceError" aria-live="polite"></p>
+              </div>
+            </div>
+            <div class="inquiry-submit-wrap">
+              <button class="inquiry-submit" type="submit" id="inquirySubmit">
+                <span class="inquiry-submit-text">SEND INQUIRY</span>
+                <span class="inquiry-submit-rule" aria-hidden="true"></span>
+                <span class="inquiry-submit-circle" aria-hidden="true">↗</span>
+              </button>
+              <p class="inquiry-demo-note">DEMO MODE / Submitting previews a confirmation. No information is sent or saved.</p>
+              <p class="inquiry-form-status sr-only" role="status" id="inquiryFormStatus" aria-live="polite"></p>
+            </div>
+          </form>
+
+          <section class="inquiry-success" id="inquirySuccess" aria-labelledby="successTitle" tabindex="-1" hidden>
+            <div class="inquiry-success-mark" aria-hidden="true">↗</div>
+            <p class="inquiry-success-kicker">PROJECT INQUIRY / CONFIRMATION</p>
+            <h2 id="successTitle">INQUIRY<br><span>RECEIVED.</span></h2>
+            <p class="inquiry-success-copy">Thanks — your idea is now on my radar.</p>
+            <p class="inquiry-success-disclaimer">This is a local demo confirmation. Your inquiry was <strong>not sent or stored</strong>. A sending service can be connected later.</p>
+            <a class="inquiry-success-link" href="index.html#build-with-me">BACK TO PORTFOLIO <span aria-hidden="true">↗</span></a>
+          </section>
+        </section>
+      </div>
+      <footer class="inquiry-footer"><span>FAIZAN © 2026</span><span>GOOD IDEAS DESERVE TO BE BUILT.</span><span>09 / PROJECT INQUIRY</span></footer>
+    </main>
+  </div>
+</body>
+</html>
