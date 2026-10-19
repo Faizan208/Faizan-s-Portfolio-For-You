@@ -145,18 +145,6 @@ html.has-scroll .hero {
   z-index: 3;
 }
 
-.creative-home {
-  position: absolute;
-  z-index: 4;
-  left: 4.65%;
-  top: 7%;
-  width: 15.5%;
-  height: 7.5%;
-  background: transparent;
-  text-decoration: none;
-  border-radius: 2px;
-
-}
 
 .creative-home:focus-visible {
   outline: 2px solid #be0a12;
@@ -185,7 +173,7 @@ html.has-scroll .hero {
 
 .hero.is-active,
 .hero.is-active .creative-home {
-  cursor: none;
+  cursor: auto;
 }
 
 .hero.is-active .cursor-ring {
@@ -211,9 +199,6 @@ html.has-scroll .featured-work {
     mask-image: none;
   }
 
-  .creative-home {
-    display: none;
-  }
 }
 
 @media (hover: none),
@@ -3072,4 +3057,8 @@ html.creator-motion-ready .creator-section .creator-enter.creator-visible {
   .footer-links a {
     transition: none !important;
   }
+}
+/* Accessibility refinement: readable metadata without changing major layout. */
+@media (max-width: 700px) {
+  .creator-media-description, .footer-no-fake-links { font-size: max(.72rem, 11px); }
 }

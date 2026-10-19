@@ -874,3 +874,10 @@ body.inquiry-page {
         animation-duration: 0.01ms !important;
     }
 }
+/* Increase secondary-text contrast without changing the inquiry composition. */
+.inquiry-optional, .inquiry-photo-index, .inquiry-micro-code { color: #63524b; font-size: max(11px, .7rem); }
+.inquiry-page input::placeholder, .inquiry-page textarea::placeholder { color: #665750; }
+
+/* Submission errors must be visible, not screen-reader-only. */
+.inquiry-form-status { display:block; min-height:1.3em; margin-top:12px; font-size:12px; color:#62534d; line-height:1.5; }
+.inquiry-form-status.is-error { color:#a50811; font-weight:700; }

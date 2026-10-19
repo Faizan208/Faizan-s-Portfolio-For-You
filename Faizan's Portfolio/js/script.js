@@ -146,6 +146,7 @@
   const closeButton = document.getElementById('dialogClose');
   if (!dialog || !title || !category || !description || !tags || !closeButton) return;
 
+  let previouslyFocused = null;
   function openDetails(id) {
     const card = document.getElementById(id);
     if (!card) return;
@@ -158,6 +159,7 @@
       tag.textContent = item.textContent;
       tags.appendChild(tag);
     });
+    previouslyFocused = document.activeElement;
     dialog.showModal();
   }
 
@@ -165,6 +167,7 @@
     button.addEventListener('click', () => openDetails(button.dataset.openProject));
   });
   closeButton.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('close', () => previouslyFocused?.focus?.());
   dialog.addEventListener('click', event => {
     if (event.target === dialog) dialog.close();
   });
@@ -238,7 +241,7 @@
 
   const archivePlayer = section.querySelector('.creator-native-video-player');
   if (archivePlayer) {
-    archivePlayer.addEventListener('loadeddata', () => archivePlayer.closest('.creator-native-video-shell')?.classList.add('has-media'));
+
     if (archivePlayer.readyState >= 2) archivePlayer.closest('.creator-native-video-shell')?.classList.add('has-media');
   }
 

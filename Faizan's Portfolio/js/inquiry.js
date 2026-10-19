@@ -1,5 +1,4 @@
-/* Project Inquiry — client-side validation and demonstration confirmation only.
-   Nothing is transmitted, stored, logged, or sent to an external service. */
+/* Project Inquiry — validates locally and submits via /api/inquiry on Vercel. */
 (() => {
   'use strict';
   const form = document.getElementById('projectInquiryForm');
@@ -56,29 +55,34 @@
     });
   });
 
-  form.addEventListener('submit', event => {
+  let sending=false;
+  form.addEventListener('submit', async event => {
     event.preventDefault();
-    let firstInvalid = null;
-    for (const input of Object.values(fields)) {
-      if (input && !validate(input) && !firstInvalid) firstInvalid = input;
-    }
-    if (firstInvalid) {
-      if (status) status.textContent = 'Please correct the highlighted fields.';
-      firstInvalid.focus();
-      return;
-    }
-    if (status) status.textContent = '';
-    form.classList.add('is-exiting');
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const reveal = () => {
-      form.hidden = true;
-      document.querySelector('.inquiry-content')?.classList.add('is-complete');
-      success.hidden = false;
-      success.focus({ preventScroll: true });
-      success.scrollIntoView({ behavior: reduceMotion ? 'instant' : 'smooth', block: 'center' });
-      // Form data is intentionally not collected or transmitted.
-    };
-    if (reduceMotion) reveal();
-    else window.setTimeout(reveal, 220);
+    if (sending) return;
+    let firstInvalid=null;
+    for (const input of Object.values(fields)) if (input && !validate(input) && !firstInvalid) firstInvalid=input;
+    if (firstInvalid) { if(status) status.textContent='Please correct the highlighted fields.';firstInvalid.focus();return; }
+    const submit=form.querySelector('[type="submit"]');
+    sending=true;if(submit)submit.disabled=true;
+    if(status){status.classList.remove('is-error');status.textContent='Sending your inquiry…';}
+    const payload=Object.fromEntries(new FormData(form));
+    try {
+      const response=await fetch('/api/inquiry',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+      const result=await response.json().catch(()=>({}));
+      if(!response.ok || !result.ok) throw new Error(result.error || 'Could not send inquiry.');
+      if(status) status.textContent='Your inquiry was sent successfully.';
+      form.classList.add('is-exiting');
+      const reveal=()=>{
+        form.hidden=true;
+        document.querySelector('.inquiry-content')?.classList.add('is-complete');
+        success.hidden=false;
+        success.focus({preventScroll:true});
+        success.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'center'});
+      };
+      if(matchMedia('(prefers-reduced-motion: reduce)').matches)reveal();else setTimeout(reveal,220);
+    } catch(error) {
+      if(status) {status.classList.add('is-error');status.textContent=error.message+' No information was confirmed as delivered.';}
+      if(submit)submit.disabled=false;
+    } finally { sending=false; }
   });
 })();
