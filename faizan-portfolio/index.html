@@ -5,9 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fdf6e9">
-  <meta name="description" content="Faizan — Creative Developer. An interactive editorial portfolio.">
-  <title>Faizan — Creative Developer</title>
-  <link rel="preload" as="image" href="assets/images/hero-main.png">
+  <meta name="description" content="Faizan, a creative web developer in Lahore, Pakistan, building ERPNext and Frappe workflows, web applications, interactive experiences, and software projects.">
+  <title>Faizan — Web Developer &amp; ERPNext Projects | Lahore</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Faizan — Creative Developer &amp; Web Projects">
+  <meta property="og:description" content="ERPNext, Frappe, web applications, and creative interactive projects from Lahore.">
+  <meta property="og:image" content="/assets/og-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://faizan-portfolio-for-you.vercel.app/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Faizan","jobTitle":"Creative Web Developer","address":{"@type":"PostalAddress","addressLocality":"Lahore","addressCountry":"PK"},"url":"https://faizan-portfolio-for-you.vercel.app/","sameAs":["https://www.youtube.com/@ExplainWeeb1"]}</script>
+  <link rel="preload" as="image" href="assets/images/hero-main.webp" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="css/style.css">
   <style>
     /* Small embedded CSS example retained for the Web Technologies assignment. */
@@ -22,26 +32,24 @@
   <main id="home">
     <section class="hero-scroll-scene" id="heroScrollScene" aria-label="Introduction and scroll transition">
       <section class="hero" id="hero" aria-labelledby="heroTitle">
-        <h1 id="heroTitle" class="sr-only">Faizan — Creative Developer</h1>
+        <h1 id="heroTitle" class="sr-only">Faizan — Creative Web Developer and ERPNext Projects</h1>
         <p class="sr-only">Instrumentation engineering and web. Turning ideas into clean, functional and meaningful
           digital experiences.</p>
 
         <!-- Static hero: the portrait, big FAIZAN lettering, background, and
              details are ONE original image. No layer moves during scrolling. -->
         <div class="hero-stage" id="heroStage">
-          <img class="original-frame" src="assets/images/hero-main.png" width="1672" height="941"
+          <img class="original-frame" src="assets/images/hero-main.webp" width="1672" height="941" decoding="async"
             alt="Faizan with oversized red typography and editorial portfolio details" draggable="false"
             fetchpriority="high">
 
           <!-- The same original cursor-controlled blue-letter reveal. -->
-          <img class="blue-reveal" id="blueReveal" src="assets/images/faizan-blue-clean.png" width="1672" height="941"
-            alt="" aria-hidden="true" draggable="false">
+          <img class="blue-reveal" id="blueReveal" src="assets/images/faizan-blue-clean.webp" width="1672" height="941"
+            alt="" aria-hidden="true" decoding="async" fetchpriority="low" draggable="false">
 
           <!-- Left header text / line plus inert right side ideas text. -->
-          <img class="header-art" src="assets/images/header-details.png" width="1672" height="941" alt=""
-            aria-hidden="true" draggable="false">
-          <a class="creative-home" href="#home" aria-label="Back to portfolio home" title="Home"
-            style="--focus-space:4px"></a>
+          <img class="header-art" src="assets/images/header-details.webp" width="1672" height="941" alt=""
+            aria-hidden="true" decoding="async" draggable="false">
         </div>
         <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
       </section>
@@ -65,7 +73,7 @@
              It does not move on its own; project cards scroll past it. -->
         <div class="portrait-pin" aria-hidden="true">
           <span class="portrait-halo"></span>
-          <img src="assets/images/portrait-sticker.png" width="1024" height="1536" alt="" loading="lazy"
+          <img src="assets/images/portrait-sticker.webp" width="1024" height="1536" alt="" loading="lazy" decoding="async"
             draggable="false">
           <span class="portrait-caption">CREATIVE<br>DEVELOPER<span>®</span></span>
         </div>
@@ -153,7 +161,7 @@
               <span class="preview-status"><b>PROJECT PREVIEW</b><br>COMING SOON</span>
               <span class="preview-cross" aria-hidden="true">+</span>
             </div>
-            <button class="project-cta" type="button" data-open-project="work-ecoearth" aria-haspopup="dialog">VIEW
+            <button class="project-cta" type="button" data-open-project="work-ecoworth" aria-haspopup="dialog">VIEW
               ECOWORTH <span aria-hidden="true">↗</span></button>
           </div>
         </article>
@@ -237,7 +245,7 @@
             <div class="collab-photo-depth" id="collabPhotoDepth">
               <figure class="collab-photo collab-enter" style="--collab-delay:190ms">
                 <div class="collab-image-square">
-                  <img src="assets/images/build-with-me-approved-portrait.png"
+                  <img src="assets/images/build-with-me-approved-portrait.webp"
                     alt="Portrait of Faizan in a plaid overshirt against a bright blue sky" width="1254" height="1254"
                     loading="lazy" decoding="async" draggable="false">
                   <span class="collab-frame-corner corner-one" aria-hidden="true"></span>
@@ -359,7 +367,7 @@
             <div class="creator-media-header"><span>01 / MOVING IMAGE</span><span>LOCAL VIDEO</span></div>
             <h3 id="creatorArchiveTitle">FROM THE ARCHIVE <span>/ VIDEO</span></h3>
             <div class="creator-native-video-shell">
-              <video controls preload="none" playsinline aria-label="Faizan's local portfolio video; file to be added"
+              <video controls preload="none" playsinline aria-label="ExplainWeeb creator video"
                 class="creator-native-video-player">
                 <source src="assets/images/Emperors Knight Betrayed And Killed But in Hindi Explain Weeb.mp4" type="video/mp4">
                 Your browser does not support the video element.
@@ -370,7 +378,7 @@
                 <span>ADD YOUR MP4 TO ACTIVATE PLAYBACK ↗</span>
               </div> -->
             </div>
-            <p class="creator-media-description">Local video slot — <code>assets/portfolio-video.mp4</code> has not been
+            <p class="creator-media-description">ExplainWeeb video archive — original creator footage.
               provided yet. Add your clip to enable playback.</p>
           </article>
 
@@ -380,14 +388,13 @@
             <div class="creator-audio-content">
               <span class="creator-sound-glyph" aria-hidden="true">)))</span>
               <h3 id="creatorAudioTitle">A QUICK NOTE<br><em>FROM ME.</em></h3>
-              <p>Press play if you'd rather hear it from me.</p>
-              <audio controls preload="none" aria-label="Faizan's audio introduction; file to be added"
+              <p>An original audio introduction will be added soon.</p>
+              <audio controls preload="none" aria-label="Audio introduction is not recorded yet"
                 class="creator-native-audio-player">
-                <source src="assets/images/Anuv Jain - ALAG AASMAAN (a song on the ukulele).mp3" type="audio/mpeg">
+                <!-- Add your OWN authorized narration file: <source src="media/faizan-audio-intro.mp3" type="audio/mpeg"> -->
                 Your browser does not support the audio element.
               </audio>
-              <p class="creator-media-description">Audio slot — <code>assets/faizan-audio-intro.mp3</code> has not been
-                provided yet.</p>
+              <p class="creator-media-description">Add your own recording to <code>media/faizan-audio-intro.mp3</code> to enable this player.</p>
             </div>
           </article>
         </div>
@@ -476,7 +483,7 @@
               ExplainWeeb <span>↗</span></a>
             <a href="project-inquiry.html">Project Inquiry <span>↗</span></a>
             <a href="https://erp.lgo.video.pk/" target="_blank" rel="noopener noreferrer">LGU ERP <span>↗</span></a>
-            <p class="footer-no-fake-links">REAL WORK. REAL LINKS. NO PLACEHOLDERS HERE.</p>
+            <p class="footer-no-fake-links">BUILT WITH CARE. ALWAYS IMPROVING.</p>
           </div>
         </div>
 
