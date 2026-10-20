@@ -384,17 +384,16 @@
 
           <article class="creator-native-audio creator-enter" style="--creator-delay:290ms"
             aria-labelledby="creatorAudioTitle">
-            <div class="creator-media-header"><span>02 / IN MY OWN WORDS</span><span>AUDIO NOTE</span></div>
+            <div class="creator-media-header"><span>02 / IN MY OWN WORDS</span><span>PRIVATE AUDIO LETTER</span></div>
             <div class="creator-audio-content">
               <span class="creator-sound-glyph" aria-hidden="true">)))</span>
-              <h3 id="creatorAudioTitle">A QUICK NOTE<br><em>FROM ME.</em></h3>
-              <p>An original audio introduction will be added soon.</p>
-              <audio controls preload="none" aria-label="Audio introduction is not recorded yet"
-                class="creator-native-audio-player">
-                <source src="assets/images/Anuv Jain - ALAG AASMAAN (a song on the ukulele).mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-              </audio>
-              <p class="creator-media-description">Add your own recording to <code>media/faizan-audio-intro.mp3</code> to enable this player.</p>
+              <h3 id="creatorAudioTitle">INSIDE<br><em>OF ME.</em></h3>
+              <p>Some stories are meant to be heard only by the person they were written for.</p>
+              <button class="voice-vault-open" type="button" id="voiceVaultOpen"
+                aria-haspopup="dialog" aria-controls="voiceVaultDialog">
+                <span aria-hidden="true">✧</span> UNLOCK VOICE NOTE <span aria-hidden="true">↗</span>
+              </button>
+              <p class="creator-media-description">A personal recording, encrypted and accessible by invitation only.</p>
             </div>
           </article>
         </div>
@@ -402,6 +401,49 @@
             REPEAT.</span><span>09 / END OF CHAPTER</span></div>
       </div>
     </section>
+
+
+    <!-- PRIVATE VOICE NOTE: no public audio path, no embedded password or encryption key. -->
+    <dialog class="voice-vault-dialog" id="voiceVaultDialog" aria-labelledby="voiceVaultTitle"
+      aria-describedby="voiceVaultDescription">
+      <div class="voice-vault-inner">
+        <div class="voice-vault-topline">
+          <span>INSIDE OF ME / PRIVATE ARCHIVE</span>
+          <button type="button" class="voice-vault-close" id="voiceVaultClose" aria-label="Close private note">✕</button>
+        </div>
+        <p class="voice-vault-eyebrow">A LETTER KEPT THROUGH TIME — 2026</p>
+        <h2 id="voiceVaultTitle">WHO'S<br><em>LISTENING?</em></h2>
+        <p id="voiceVaultDescription">Choose who this moment is for.</p>
+        <div class="voice-vault-roles" id="voiceVaultRoles">
+          <button class="voice-vault-role" type="button" data-voice-audience="somebody">
+            <span>01 / SOMEONE SPECIAL</span><strong>Somebody</strong><small>A message held close to my heart.</small><b aria-hidden="true">↗</b>
+          </button>
+          <button class="voice-vault-role" type="button" data-voice-audience="future">
+            <span>02 / A FUTURE LETTER</span><strong>Future Faizan</strong><small>To the person I might become.</small><b aria-hidden="true">↗</b>
+          </button>
+        </div>
+        <form id="voiceVaultForm" class="voice-vault-form" hidden novalidate>
+          <button type="button" class="voice-vault-back" id="voiceVaultBack">← BACK TO CHOICES</button>
+          <p class="voice-vault-welcome" id="voiceVaultWelcome" hidden>
+            Welcome back, Faizan. Years may have passed since you recorded this. You may have changed,
+            grown, or forgotten how deeply you once felt. Listen with kindness to the person you used to be.
+          </p>
+          <p class="voice-vault-welcome" id="voiceVaultSomebody" hidden>
+            This is something I could never fully say out loud. If this letter was meant for you, you already have the key.
+          </p>
+          <label for="voiceVaultPassword">ENTER YOUR PRIVATE PASSWORD</label>
+          <input id="voiceVaultPassword" type="password" autocomplete="off" autocapitalize="off"
+            spellcheck="false" minlength="1" maxlength="256" required placeholder="Private password" />
+          <button type="submit" class="voice-vault-submit" id="voiceVaultSubmit">UNLOCK LETTER ↗</button>
+          <p class="voice-vault-status" id="voiceVaultStatus" role="status" aria-live="polite"></p>
+          <div class="voice-vault-playback" id="voiceVaultPlayback" hidden>
+            <span>THE LETTER IS OPEN</span>
+            <audio id="voiceVaultPlayer" controls preload="none" aria-label="Private voice note"></audio>
+            <small>Only listen somewhere private. Anyone with the password can save what they hear.</small>
+          </div>
+        </form>
+      </div>
+    </dialog>
 
     <!-- Remaining project CTAs open local details, never fabricated destinations. -->
     <dialog class="project-dialog" id="projectDialog" aria-labelledby="dialogTitle">
@@ -497,6 +539,7 @@
     </div>
   </footer>
   <script src="js/script.js" defer></script>
+  <script src="js/private-voice.js" defer></script>
 </body>
 
 </html>
