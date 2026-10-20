@@ -1,0 +1,8 @@
+# Private voice note. Never commit plaintext recordings, keys, or generated metadata.
+private-voice-output/
+.env
+.env.*
+!.env.example
+.vercel/
+node_modules/
+.DS_Store
