@@ -4,8 +4,8 @@
 /* Top-right corner of the viewport */
 .hero-page-menu {
   position: fixed;
-  top: 78px;
-  right: 20px;
+  top: 77px;
+  right: 21px;
   z-index: 9999;
   font-family: Arial, Helvetica, sans-serif;
   color: #27211e;
