@@ -1,0 +1,75 @@
+/* FAIZAN — hero-only page switcher. Scoped so no existing hero art changes. */
+.hero-page-menu {
+  position: absolute;
+  z-index: 50;
+  top: clamp(18px, 3.4vw, 43px);
+  right: clamp(18px, 4.0vw, 66px);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #27211e;
+}
+.hero-menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 17px;
+  min-height: 47px;
+  padding: 0 14px 0 18px;
+  border: 1px solid rgba(62,42,34,.2);
+  border-radius: 2px;
+  color: #201918;
+  background: rgba(253,246,233,.96);
+  box-shadow: 0 4px 16px rgba(62,42,34,.07);
+  font: 800 10px/1 Arial, sans-serif;
+  letter-spacing: .15em;
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s;
+}
+.hero-menu-toggle:hover,
+.hero-menu-toggle[aria-expanded="true"] { background: #bd080b; color: #fff8ed; border-color: #bd080b; }
+.hero-menu-toggle:focus-visible { outline: 3px solid #263f77; outline-offset: 4px; }
+.hero-menu-lines { display: grid; gap: 5px; width: 22px; }
+.hero-menu-lines i { display: block; height: 2px; width: 100%; background: currentColor; transition: transform .2s; }
+.hero-menu-toggle[aria-expanded="true"] .hero-menu-lines i:first-child { transform: translateY(3.5px) rotate(45deg); }
+.hero-menu-toggle[aria-expanded="true"] .hero-menu-lines i:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+.hero-menu-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: min(310px, calc(100vw - 30px));
+  padding: 16px;
+  background: #fff9ef;
+  border: 1px solid #24201d;
+  box-shadow: 12px 12px 0 rgba(36,32,29,.12);
+  animation: hero-menu-enter .2s ease-out both;
+}
+.hero-menu-panel[hidden] { display: none !important; }
+.hero-menu-kicker { display: flex; justify-content: space-between; padding: 5px 3px 15px; color: #8b6b5d; font-size: 10px; font-weight: 800; letter-spacing: .12em; }
+.hero-menu-link {
+  display: grid;
+  grid-template-columns: 25px 1fr auto;
+  gap: 10px;
+  align-items: baseline;
+  padding: 15px 5px;
+  border-top: 1px solid #e4d5c8;
+  color: #27201d;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: -.045em;
+  line-height: 1.05;
+  transition: color .16s, padding-left .16s;
+}
+.hero-menu-link:hover,
+.hero-menu-link:focus-visible { color: #bd080b; padding-left: 10px; }
+.hero-menu-link small { font-size: 10px; font-weight: 800; letter-spacing: .06em; color: #997b6f; }
+.hero-menu-link b { font-size: 16px; font-weight: 400; }
+.hero-menu-link[aria-current="page"] { color: #bd080b; }
+.hero-menu-foot { margin-top: 7px; padding: 12px 4px 1px; color: #947c70; font-size: 9px; font-weight: 800; letter-spacing: .15em; }
+.hero-page-menu.is-past-hero { visibility: hidden; opacity: 0; pointer-events: none; }
+@keyframes hero-menu-enter { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 600px) {
+  .hero-page-menu { top: 14px; right: 14px; }
+  .hero-menu-toggle { min-height: 42px; padding: 0 12px; gap: 10px; font-size: 9px; }
+  .hero-menu-panel { width: min(290px, calc(100vw - 28px)); }
+}
+@media (prefers-reduced-motion: reduce) { .hero-menu-panel { animation: none; } .hero-menu-lines i { transition: none; } }
