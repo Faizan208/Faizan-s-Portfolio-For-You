@@ -1370,3 +1370,37 @@ html.about-can-reveal .about-reveal {
 html.about-can-reveal .about-reveal.is-revealed {
   transform: translateY(0)
 }
+
+
+/* =========================================
+   FAIZAN — CUSTOM SCROLLBAR
+   ========================================= */
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Scrollbar background */
+::-webkit-scrollbar-track {
+  background: #fff7ed;
+}
+
+/* Scrollbar draggable thumb */
+::-webkit-scrollbar-thumb {
+  background: #c60000;
+  border-radius: 10px;
+  border: 2px solid #fff7ed;
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: #900000;
+}
+
+/* Firefox support */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #c60000 #fff7ed;
+}
