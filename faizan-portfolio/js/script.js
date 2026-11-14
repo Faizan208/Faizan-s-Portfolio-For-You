@@ -299,45 +299,10 @@
   const notice = document.getElementById('creatorVideoNotice');
   if (!frame || !artwork || !play || !notice) return;
 
-  // The video is not supplied yet. A future video URL can be inserted into
-  // data-youtube-url on #youtube-video; the actual iframe loads ONLY on click.
-  function youtubeVideoId(raw) {
-    if (!raw) return null;
-    try {
-      const url = new URL(raw);
-      const host = url.hostname.toLowerCase();
-      let id = null;
-      if (host === 'youtu.be' || host === 'www.youtu.be') {
-        id = url.pathname.split('/').filter(Boolean)[0];
-      } else if (['youtube.com','www.youtube.com','m.youtube.com','www.youtube-nocookie.com','youtube-nocookie.com'].includes(host)) {
-        if (url.pathname === '/watch') id = url.searchParams.get('v');
-        else if (/^\/(shorts|live|embed)\//.test(url.pathname)) id = url.pathname.split('/')[2];
-      }
-      return /^[A-Za-z0-9_-]{11}$/.test(id || '') ? id : null;
-    } catch { return null; }
-  }
-
-  function activateFeature(event) {
-    event.preventDefault();
-    const id = youtubeVideoId(frame.dataset.youtubeUrl || '');
-    if (!id) {
-      notice.hidden = false;
-      notice.querySelector('a')?.focus({ preventScroll:true });
-      return;
-    }
-    notice.hidden = true;
-    const iframe = document.createElement('iframe');
-    iframe.className = 'creator-iframe';
-    iframe.title = 'ExplainWeeb featured YouTube video';
-    iframe.src = `https://www.youtube-nocookie.com/embed/${id}`;
-    iframe.allow = 'accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share';
-    iframe.allowFullscreen = true;
-    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
-    iframe.loading = 'eager';
-    frame.appendChild(iframe);
-    frame.classList.add('is-loaded');
-    play.setAttribute('aria-hidden','true');
-    play.tabIndex = -1;
+  function activateFeature() {
+    notice.hidden = false;
+    play.setAttribute('aria-expanded', 'true');
+    notice.focus({ preventScroll:true });
   }
   play.addEventListener('click',activateFeature);
 
