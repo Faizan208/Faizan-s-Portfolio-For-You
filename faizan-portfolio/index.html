@@ -16,7 +16,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://faizan-portfolio-for-you.vercel.app/">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Faizan","jobTitle":"Creative Web Developer","address":{"@type":"PostalAddress","addressLocality":"Lahore","addressCountry":"PK"},"url":"https://faizan-portfolio-for-you.vercel.app/","sameAs":["https://www.youtube.com/@ExplainWeeb1"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Faizan","jobTitle":"Creative Web Developer","address":{"@type":"PostalAddress","addressLocality":"Lahore","addressCountry":"PK"},"url":"https://faizan-portfolio-for-you.vercel.app/"}</script>
   <link rel="preload" as="image" href="assets/images/hero-main.webp" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/hero-menu.css">
@@ -326,26 +326,22 @@
               <span>01 / FEATURED VIDEO</span>
               <span>YOUTUBE &nbsp; / &nbsp; EXPLAINWEEB</span>
             </div>
-            <div class="creator-video-frame" id="youtube-video" data-youtube-url=""
-              aria-label="ExplainWeeb featured video placeholder">
+            <div class="creator-video-frame" id="youtube-video"
+              aria-label="ExplainWeeb featured video, access restricted">
               <div class="creator-artwork" id="creatorArtwork" aria-hidden="true">
                 <div class="creator-artwork-rule creator-artwork-rule-one"></div>
                 <div class="creator-artwork-title"><span>EXPLAIN</span><strong>WEEB<span
                       class="creator-dot">.</span></strong></div>
-                <div class="creator-artwork-meta"><span>YOUTUBE / CREATIVE LOG</span><span>VIDEO LINK COMING SOON</span>
+                <div class="creator-artwork-meta"><span>YOUTUBE / CREATIVE LOG</span><span>ACCESS RESTRICTED</span>
                 </div>
               </div>
-              <!-- Replace with Faizan's actual popular YouTube video -->
-              <!-- Set data-youtube-url above to the actual youtube.com/watch?v=... or youtu.be/... URL later. -->
-              <a class="creator-play" id="creatorPlay" href="#youtube-video"
-                aria-label="Open the featured ExplainWeeb video when a video link is available">
+              <button class="creator-play" id="creatorPlay" type="button"
+                aria-label="Play featured video" aria-controls="creatorVideoNotice" aria-expanded="false">
                 <span class="creator-play-icon" aria-hidden="true"></span>
-              </a>
-              <div class="creator-video-notice" id="creatorVideoNotice" role="status" aria-live="polite" hidden>
-                <strong>FEATURED VIDEO / COMING SOON</strong>
-                <span>Please Checkout Some Videos If You Have Guts.</span>
-                <a href="https://www.youtube.com/@ExplainWeeb1" target="_blank" rel="noopener noreferrer">WATCH
-                  EXPLAINWEEB ↗</a>
+              </button>
+              <div class="creator-video-notice" id="creatorVideoNotice" role="status" aria-live="polite" tabindex="-1" hidden>
+                <strong>You are not permitted to access this URL.</strong>
+                <span>You are not permitted to review this YouTube channel.</span>
               </div>
             </div>
             <div class="creator-feature-caption"><span>FIG. 09 — VIDEO JOURNAL / EXPLAINWEEB</span><span>CREATING BEYOND
@@ -358,16 +354,10 @@
             <h3>I CREATE<br>THINGS<br><em>HERE TOO.</em></h3>
             <p class="creator-aside-description">Videos, experiments, ideas, tech and whatever I find interesting enough
               to share.</p>
-            <a class="creator-channel-cta" href="https://www.youtube.com/@ExplainWeeb1" target="_blank"
-              rel="noopener noreferrer">
-              <span>VISIT EXPLAINWEEB</span><span aria-hidden="true" class="creator-link-arrow">↗</span>
-            </a>
+            <p class="channel-restriction">You are not permitted to review this YouTube channel.</p>
             <div class="creator-social creator-enter" style="--creator-delay:440ms">
               <span>FIND ME ONLINE</span>
-              <a href="https://www.youtube.com/@ExplainWeeb1" target="_blank" rel="noopener noreferrer"
-                aria-label="ExplainWeeb YouTube channel, opens in a new tab">
-                YOUTUBE <span aria-hidden="true">↗</span>
-              </a>
+              <p class="channel-restriction">You are not permitted to review this YouTube channel.</p>
               <span class="creator-social-footnote">YOUTUBE / EXPLAINWEEB</span>
             </div>
           </aside>
@@ -535,8 +525,7 @@
 
           <div class="footer-links">
             <h3>ELSEWHERE <span>↘</span></h3>
-            <a href="https://www.youtube.com/@ExplainWeeb1" target="_blank" rel="noopener noreferrer">YouTube /
-              ExplainWeeb <span>↗</span></a>
+            <p class="channel-restriction">You are not permitted to review this YouTube channel.</p>
             <a href="project-inquiry.html">Project Inquiry <span>↗</span></a>
             <a href="https://erp.lgo.video.pk/" target="_blank" rel="noopener noreferrer">LGU ERP <span>↗</span></a>
             <p class="footer-no-fake-links">BUILT WITH CARE. ALWAYS IMPROVING.</p>

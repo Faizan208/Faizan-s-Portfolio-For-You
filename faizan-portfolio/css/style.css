@@ -1826,6 +1826,7 @@ html.collab-motion-ready .collab-title-line:nth-child(2)>span {
 }
 
 .creator-play {
+  cursor: pointer;
   position: absolute;
   z-index: 6;
   left: 50%;
@@ -1926,7 +1927,15 @@ html.collab-motion-ready .collab-title-line:nth-child(2)>span {
   line-height: 1.45;
   color: #60514c;
   font-size: .85rem;
-  margin-bottom: 18px;
+  margin-bottom: 0;
+}
+
+.channel-restriction {
+  margin: 0;
+  padding: 12px 0;
+  font-size: .9rem;
+  line-height: 1.5;
+  color: inherit;
 }
 
 .creator-video-notice a {
