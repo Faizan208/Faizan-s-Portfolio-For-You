@@ -121,12 +121,46 @@
                 <p class="inquiry-error" id="projectReferenceError" aria-live="polite"></p>
               </div>
             </div>
+            <fieldset class="inquiry-demo-controls" aria-describedby="demoControlsHelp">
+              <legend>OPTIONAL / FORM CONTROL DEMONSTRATION</legend>
+              <p id="demoControlsHelp">For this academic assignment only. Try sample values below; none of these demonstration values are sent with your inquiry or saved by this site.</p>
+              <div class="inquiry-fields">
+                <div class="inquiry-field">
+                  <label for="demoPassword">SAMPLE PASSWORD <span class="inquiry-optional">OPTIONAL DEMO</span></label>
+                  <input id="demoPassword" type="password" autocomplete="off" maxlength="64" aria-describedby="demoPasswordHelp">
+                  <p class="inquiry-field-help" id="demoPasswordHelp">Use made-up text only, never an actual account password. Cleared on submit or reset.</p>
+                </div>
+                <div class="inquiry-field">
+                  <label for="demoAge">SAMPLE AGE <span class="inquiry-optional">OPTIONAL DEMO</span></label>
+                  <input id="demoAge" type="number" min="1" max="120" step="1" autocomplete="off" aria-describedby="demoAgeHelp demoAgeError">
+                  <p class="inquiry-field-help" id="demoAgeHelp">Try a fictional whole-number age from 1 to 120. Your real age is not needed.</p>
+                  <p class="inquiry-error" id="demoAgeError" aria-live="polite"></p>
+                </div>
+                <div class="inquiry-field inquiry-field--wide">
+                  <label for="demoStartDate">SAMPLE PROJECT START DATE <span class="inquiry-optional">OPTIONAL DEMO</span></label>
+                  <input id="demoStartDate" type="date" aria-describedby="demoStartDateError">
+                  <p class="inquiry-error" id="demoStartDateError" aria-live="polite"></p>
+                </div>
+              </div>
+              <fieldset class="inquiry-choice-group">
+                <legend>Preferred project discussion format (optional demo)</legend>
+                <label><input type="radio" name="demoDiscussion" value="email" checked> Email discussion</label>
+                <label><input type="radio" name="demoDiscussion" value="video"> Video call</label>
+              </fieldset>
+              <fieldset class="inquiry-choice-group">
+                <legend>Project interests (optional demo — choose any)</legend>
+                <label><input type="checkbox" name="demoInterests" value="web"> Web development</label>
+                <label><input type="checkbox" name="demoInterests" value="erp"> ERP workflows</label>
+                <label><input type="checkbox" name="demoInterests" value="design"> Interface design</label>
+              </fieldset>
+            </fieldset>
             <div class="inquiry-submit-wrap">
               <button class="inquiry-submit" type="submit" id="inquirySubmit">
                 <span class="inquiry-submit-text">SEND INQUIRY</span>
                 <span class="inquiry-submit-rule" aria-hidden="true"></span>
                 <span class="inquiry-submit-circle" aria-hidden="true">↗</span>
               </button>
+              <button class="inquiry-reset" type="reset">RESET FORM</button>
               <p class="inquiry-demo-note">Messages are delivered only after email delivery is configured. Otherwise, you will see a clear error.</p>
               <p class="inquiry-form-status" role="status" id="inquiryFormStatus" aria-live="polite"></p>
             </div>

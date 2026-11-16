@@ -15,6 +15,16 @@
   <title>Behind the Screen — About Faizan</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/about.css">
+  <!-- Assignment: embedded CSS styles this page's Technical Skills section. -->
+  <style>
+    .about-skills { padding-block: clamp(48px, 7vw, 100px); }
+    .about-skills h2 { font-size: clamp(2rem, 5vw, 4rem); letter-spacing: -.05em; margin: 24px 0; }
+    .about-skills h2 em { color: #c1121e; font-style: normal; }
+    .about-skills p { max-width: 55ch; line-height: 1.6; }
+    .about-skills-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0 28px; padding-left: 24px; margin-top: 28px; }
+    .about-skills-list li { padding: 18px 8px; border-bottom: 1px solid #c8b9ab; font-weight: 700; }
+    .about-skills-list li::marker { color: #c1121e; }
+  </style>
   <script src="js/about.js" defer></script>
 </head>
 
@@ -84,6 +94,16 @@
           <div class="about-story-signature"><strong>FAIZAN.</strong><span>PERSON FIRST. DEVELOPER SECOND.</span></div>
         </div>
       </div>
+    </section>
+
+    <section class="about-skills section-wrap" id="technical-skills" aria-labelledby="skills-title">
+      <div class="section-label"><span>THE TOOLKIT</span><span>FROM THE WORK ↘</span></div>
+      <h2 id="skills-title">TECHNICAL <em>SKILLS.</em></h2>
+      <p>The technologies behind this portfolio and my university ERP work.</p>
+      <ul class="about-skills-list">
+        <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Python</li>
+        <li>Frappe</li><li>ERPNext</li><li>Docker</li><li>Linux</li>
+      </ul>
     </section>
 
     <section class="about-interests section-wrap" id="outside-code" aria-labelledby="interests-title">

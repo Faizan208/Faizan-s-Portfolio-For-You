@@ -1,3 +1,15 @@
+/* Optional assignment controls share the inquiry page's paper and ink palette. */
+.inquiry-demo-controls { min-width: 0; margin: 30px 0 0; padding: 24px 0; border: 0; border-top: 1px solid #d8cbc0; }
+.inquiry-demo-controls > legend { padding: 0 12px 0 0; color: #a40e19; font-size: .75rem; font-weight: 750; letter-spacing: .08em; }
+.inquiry-demo-controls > p, .inquiry-field-help { color: #62524c; font-size: .8rem; line-height: 1.6; }
+.inquiry-demo-controls > p { margin: 0 0 24px; }
+.inquiry-choice-group { min-width: 0; margin: 20px 0 0; padding: 16px; border: 1px solid #d8cbc0; }
+.inquiry-choice-group legend { padding: 0 8px; font-size: .8rem; font-weight: 700; }
+.inquiry-choice-group label { display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: .85rem; cursor: pointer; }
+.inquiry-choice-group input { flex: 0 0 auto; width: 18px; height: 18px; accent-color: #cb0b12; }
+.inquiry-reset { margin-top: 16px; padding: 12px 18px; min-height: 44px; border: 1px solid #ab9c8d; background: transparent; color: #232120; cursor: pointer; }
+.inquiry-reset:disabled { opacity: .6; cursor: wait; }
+
 /* FAIZAN / PROJECT INQUIRY — scoped page styling. No external frameworks. */
 :root {
     --inq-paper: #f6efe5;
